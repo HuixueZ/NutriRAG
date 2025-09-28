@@ -81,8 +81,8 @@ def write_jsonl(path, rows: List[Dict]):
 def main():
     ap = argparse.ArgumentParser()
     #/Users/kz34/Documents/UMN/pycharm_project/nutrition/nutrition_llama_test/train.jsonl
-    ap.add_argument("--indir", required=False,default='/Users/kz34/Documents/UMN/pycharm_project/nutrition/nutrition_llama_test/', help="Folder with train.jsonl, valid.jsonl, test.jsonl")
-    ap.add_argument("--outdir", required=False,default='covert_data_BM25', help="Where augmented files will be written")
+    ap.add_argument("--indir", required=True, help="Folder with train.jsonl, valid.jsonl, test.jsonl")
+    ap.add_argument("--outdir", required=True, help="Where augmented files will be written")
     ap.add_argument("--k", type=int, default=15, help="Top-k supports to retrieve from TRAIN")
     args = ap.parse_args()
 
